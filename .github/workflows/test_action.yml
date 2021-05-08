@@ -1,0 +1,40 @@
+name: test_action
+
+on: 
+  push:
+    branches: [develop]
+      
+
+jobs: 
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: node version
+        run: node -v
+      - name: echo hello
+        run: echo "hello"
+      - name: github action hello world
+        uses: actions/hello-world-javascript-action@v1
+        with: 
+          who-to-greet: 'Mona the Octocat'
+      - name: list files
+        run: |
+          pwd
+          ls -a 
+      - name: checkout
+        id: checkout
+        uses: actions/checkout@v2
+      - name: list files after checkout
+        run: |
+          pwd
+          ls -a    
+      - name: log time
+        if: (${{ github.repository }} == 'Dinesh-Rupchandani/github_actions')
+        run: |
+          echo "${{ steps.checkout.outputs }}"   
+          echo "$GITHUB_REPOSITORY"
+          echo "${{ github.repository }}"  
+         
+             
+  
+  
