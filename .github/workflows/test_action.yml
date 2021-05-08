@@ -11,7 +11,7 @@ jobs:
       - name: echo hello
         run: echo "hello"
       - name: github action hello world
-        uses: actions/hello-world-javascript-action@v1
+        uses: actions/hello-world-javascript-action@v2
         with: 
           who-to-greet: 'Mona the Octocat'
       - name: list files
