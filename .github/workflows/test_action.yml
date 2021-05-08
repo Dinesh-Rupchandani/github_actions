@@ -21,8 +21,10 @@ jobs:
       - name: checkout action
         id: checkout
         uses: actions/checkout@v2
+      - name: list files after checkout
+        run: |
           pwd
-          ls -a 
+          ls -a    
       - name: log time
         run: ${{ steps.checkout.output.time }}    
              
