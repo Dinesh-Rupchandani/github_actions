@@ -29,7 +29,7 @@ jobs:
           pwd
           ls -a    
       - name: log time
-        if: $GITHUB_REPOSITORY == Dinesh-Rupchandani/github_actions
+        if: ${{ github.repository }} == Dinesh-Rupchandani/github_actions
         run: |
           echo "${{ steps.checkout.outputs }}"   
           echo "$GITHUB_REPOSITORY"
