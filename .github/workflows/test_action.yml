@@ -1,0 +1,18 @@
+name: test_action
+
+on: push
+
+jobs: 
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: node version
+        run: node -v
+      - name: echo hello
+        run: echo "hello"
+      - name: github action hello world
+        uses: actions/hello-world-javascript-action@v1
+        with: 
+          who-to-greet: 'Mona the Octocat'
+  
+  
