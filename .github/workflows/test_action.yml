@@ -14,5 +14,17 @@ jobs:
         uses: actions/hello-world-javascript-action@v1
         with: 
           who-to-greet: 'Mona the Octocat'
+      - name: list files
+        run: |
+          pwd
+          ls -a 
+      - name: checkout action
+        id: checkout
+        uses: actions/checkout@v1
+          pwd
+          ls -a 
+      - name: log time
+        run: ${{ steps.checkout.output.time }}    
+             
   
   
