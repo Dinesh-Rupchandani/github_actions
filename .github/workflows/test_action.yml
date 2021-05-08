@@ -30,9 +30,9 @@ jobs:
           ls -a    
       - name: log time
         run: |
-        echo "${{ steps.checkout.outputs.time }}"   
-        echo "${ GITHUB_REPOSITORY }"
-        echo "${{ github.repository }}"  
+          echo "${{ steps.checkout.outputs.time }}"   
+          echo "${ GITHUB_REPOSITORY }"
+          echo "${{ github.repository }}"  
          
              
   
